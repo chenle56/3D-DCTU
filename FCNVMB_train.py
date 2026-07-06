@@ -58,8 +58,8 @@ train_set, label_set, data_dsp_dim, label_dsp_dim = DataLoad_Train(train_size=Tr
 # Change data type (numpy --> tensor)
 full_dataset = data_utils.TensorDataset(torch.from_numpy(train_set), torch.from_numpy(label_set))
 
-val_ratio = 0.05  # 验证集比例
-train_ratio = 0.45  # 训练集比例 (可以调整这个值来做对比实验)
+val_ratio = 0.1  # 验证集比例
+train_ratio = 0.9  # 训练集比例 (可以调整这个值来做对比实验)
 
 valdata_size = int(len(full_dataset) * val_ratio)
 # train_size = len(full_dataset) - valdata_size
